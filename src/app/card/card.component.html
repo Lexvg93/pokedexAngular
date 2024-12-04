@@ -1,1 +1,21 @@
-<p>card works!</p>
+<div class="pokemon">
+    <p class="pokemon-id-back">#{{pokeId()}}</p>
+    <div class="pokemon-imagen">
+        <img src="{{poke.sprites.other['official-artwork'].front_default}}" alt="{{poke.name}}">
+    </div>
+    <div class="pokemon-info">
+        <div class="nombre-contenedor">
+            <p class="pokemon-id-back">#{{pokeId()}}</p>
+            <h2 class="pokemon-nombre">{{poke.name}}</h2>
+        </div>
+    </div>
+    <div class="pokemon-tipos">
+        @for (tipo of poke.types; track $index) {
+            <p class="{{tipo.type.name}}">{{tipo.type.name}}</p>
+        }
+    </div>
+    <div class="pokemon-stats">
+        <p class="stat">{{poke.height}}m</p>
+        <p class="stat">{{poke.weight}}kg</p>
+    </div>
+</div>
