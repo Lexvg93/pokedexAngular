@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Boton } from '../models/boton';
 
 @Component({
   selector: 'app-boton',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './boton.component.css'
 })
 export class BotonComponent {
-
+  @Input()
+  botonId!:Boton;
+  pokexTipo(name:string){
+    console.log(name)
+  }
 }

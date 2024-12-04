@@ -1,1 +1,5 @@
-<p>boton works!</p>
+@if (botonId.id != "ver-todos") {
+    <button class="btn btn-header {{botonId.id}}" id= {{botonId.id}} (click)="pokexTipo(botonId.id)" >{{botonId.nombre}}</button>
+}@else {
+    <button class="btn btn-header" id= {{botonId.id}} (click)="pokexTipo(botonId.id)" > {{botonId.nombre}} </button>
+}
