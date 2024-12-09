@@ -1,1 +1,9 @@
-<p>nav works!</p>
+<header>
+    <nav class="nav">
+        <ul class="nav-list">
+            @for (boton of botonesDatos; track $index) {
+                <li class="nav-item"><app-boton [botonId]=boton /></li>
+            }
+        </ul>
+    </nav>
+</header>
